@@ -42,20 +42,40 @@ def signup():
         return "Email already exists."
 
 # Login form POST handler with session setup
+# @app.route('/login', methods=['POST'])
+# def login():
+#     email = request.form['email']
+#     password = request.form['password']
+
+#     cursor.execute("SELECT * FROM users WHERE email=%s AND password=%s", (email, password))
+#     user = cursor.fetchone()
+
+#     if user:
+#         session['user_id'] = user[0]    # Store user ID in session
+#         session['user_name'] = user[1]  # Store user name in session
+#         return redirect('/dashboard')
+#     else:
+#         return "Invalid credentials."
+
 @app.route('/login', methods=['POST'])
 def login():
-    email = request.form['email']
-    password = request.form['password']
+    try:
+        email = request.form['email']
+        password = request.form['password']
 
-    cursor.execute("SELECT * FROM users WHERE email=%s AND password=%s", (email, password))
-    user = cursor.fetchone()
+        cursor.execute("SELECT * FROM users WHERE email=%s AND password=%s", (email, password))
+        user = cursor.fetchone()
 
-    if user:
-        session['user_id'] = user[0]    # Store user ID in session
-        session['user_name'] = user[1]  # Store user name in session
-        return redirect('/dashboard')
-    else:
-        return "Invalid credentials."
+        if user:
+            session['user_id'] = user[0]
+            session['user_name'] = user[1]
+            return redirect('/dashboard')
+        else:
+            return "Invalid credentials."
+
+    except Exception as e:
+        return f"Login Error: {str(e)}"
+
 
 # Dashboard route, only accessible if logged in
 @app.route('/dashboard')
