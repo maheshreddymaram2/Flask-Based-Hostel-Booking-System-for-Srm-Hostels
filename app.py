@@ -13,10 +13,11 @@ app.secret_key = os.getenv('SECRET_KEY', 'default-secret-key')  # fallback if no
 
 # DB connection (for user auth)
 db = mysql.connector.connect(
-    host=os.getenv('DB_HOST', 'localhost'),
-    user=os.getenv('DB_USER', 'root'),
-    password=os.getenv('DB_PASSWORD', ''),
-    database=os.getenv('DB_NAME', 'srm_hostel')
+    host=os.getenv('DB_HOST'),
+    user=os.getenv('DB_USER'),
+    password=os.getenv('DB_PASSWORD'),
+    database=os.getenv('DB_NAME'),
+    port=int(os.getenv('DB_PORT', 3306))
 )
 cursor = db.cursor()
 
@@ -194,12 +195,15 @@ def api_bookings():
 @app.route('/profile.html')
 def serve_profile_page():
     return send_file('profile.html')
+
 @app.route('/profile.css')
 def serve_profile_css():
     return send_file('profile.css')
+
 @app.route('/profile.js')
 def serve_profile_js():
     return send_file('profile.js')
+
 @app.route('/logout')
 def logout():
     session.clear()
@@ -234,6 +238,7 @@ def serve_image():
 @app.route('/booking.html')
 def booking_page():
     return send_file('booking.html')
+
 @app.route('/hostel1.jpeg')
 def serve_hostel1():
     return send_file('hostel1.jpeg')
@@ -258,7 +263,6 @@ def booking_css():
 def booking_form():
     return send_file('bookingform.html')
 
-# Serve bookingform.css from static folder
 @app.route('/bookingform.css')
 def booking_form_css():
     return send_file('bookingform.css')
@@ -270,6 +274,7 @@ def booking_form_js():
 @app.route('/receipt.html')
 def receipt_page():
     return send_file('receipt.html')
+
 @app.route('/receipt.css')
 def receipt_css():
     return send_file('receipt.css')
