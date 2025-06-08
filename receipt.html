@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Receipt - SRM Hostel</title>
+  <link rel="stylesheet" href="receipt.css" />
+  <!-- Load jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="receipt.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Booking Receipt</h1>
+    <div id="receiptDetails" class="receipt-details">
+      <!-- Booking details will be inserted here -->
+    </div>
+
+    <div class="buttons">
+      <button id="downloadPdfBtn">Download PDF</button>
+      <button id="backDashboardBtn">Back to Dashboard</button>
+    </div>
+  </div>
+</body>
+</html>
+

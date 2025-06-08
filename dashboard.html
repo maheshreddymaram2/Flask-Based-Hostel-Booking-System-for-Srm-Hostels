@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Dashboard - SRM Hostel</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>SRM Hostel</h2>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="booking.html">Book Hostel</a>
+        <a href="#" id="viewSlotsBtn">View Slots Left</a>
+        <a href="#" id="cancelBookingBtn">Cancel Booking</a>
+        <a href="receipt.html" id="downloadReceiptBtn">Download Receipt</a>
+        <a href="profile.html">Profile</a> 
+        <a href="#" id="toggleChatbotBtn">Use Chatbot for Help</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>Logged in as <span id="userName">{{username}}</span></p>
+        <button id="updateProfileBtn">Update Profile</button>
+        <!--<a href="profile.html" class="update-profile-link">Update Profile</a>-->
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Welcome<span id="userNameHeader">{{username}}</span></h1>
+        <p>Manage your bookings and chat with us for help.</p>
+      </header>
+
+      <!-- Dynamic Sections -->
+      <section id="slots" class="content-section hidden">
+        <h2>Available Slots</h2>
+        <div id="slots-info" class="slots-info">Loading slot information...</div>
+      </section>
+
+      <section id="cancel" class="content-section hidden">
+        <h2>Cancel Booking</h2>
+        <form id="cancelForm">
+          <label for="bookingId">Booking ID:</label>
+          <input type="text" id="bookingId" name="bookingId" required />
+          <button type="submit">Cancel Booking</button>
+        </form>
+        <div id="cancelMessage" class="message"></div>
+      </section>
+
+      <!-- Chatbot -->
+      <section id="chatbotSection" class="chatbot-section hidden">
+        <div class="chatbot-header">
+          <h3>Help Bot</h3>
+          <button id="closeChatbotBtn" title="Close Chat">×</button>
+        </div>
+        <div id="chatMessages" class="chat-messages"></div>
+        <form id="chatForm" class="chat-form">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask me anything..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
+

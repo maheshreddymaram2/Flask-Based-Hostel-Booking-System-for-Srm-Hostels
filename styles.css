@@ -1,0 +1,111 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #99ccff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.auth-box h2 {
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background-color: #002244;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+
+  .auth-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .auth-box input {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .auth-box button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .auth-container {
+    padding: 40px 30px;
+    max-width: 90%;
+  }
+
+  .auth-box h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 50px 40px;
+    max-width: 450px;
+  }
+
+  .auth-box h2 {
+    font-size: 1.8rem;
+  }
+}

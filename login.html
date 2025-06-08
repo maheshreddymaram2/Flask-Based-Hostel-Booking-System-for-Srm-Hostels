@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SRM Hostel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="auth.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <img src="srmhostel.png" alt="SRM Hostel Logo" class="logo" />
+      <h2>Login</h2>
+      <form id="loginForm" method="POST" action="/login">
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="password" placeholder="Password" name="password" required />
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

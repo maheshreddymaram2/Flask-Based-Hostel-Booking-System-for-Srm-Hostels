@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Room - SRM Hostel</title>
+  <link rel="stylesheet" href="booking.css" />
+  <script defer src="booking.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Select Your Room Type</h1>
+    <p>Choose one of the following room types to proceed with booking.</p>
+  </header>
+
+  <main class="room-selection">
+    <div class="room-card" data-room="ac-washroom" data-price="1200">
+      <img src="hostel1.jpeg" alt="AC with Attached Washroom" />
+      <h2>AC Room with Attached Washroom</h2>
+      <p>Comfortable AC room with private attached washroom.</p>
+      <p class="price">₹2,20,000 per year</p>
+      <button class="select-room-btn">Select</button>
+    </div>
+
+    <div class="room-card" data-room="nonac-attached" data-price="900">
+      <img src="hostel2.png" alt="Non-AC with Attached Washroom" />
+      <h2>Non-AC Room with Attached Washroom</h2>
+      <p>Cozy Non-AC room with private attached washroom.</p>
+      <p class="price">₹1,80,000 per year</p>
+      <button class="select-room-btn">Select</button>
+    </div>
+
+    <div class="room-card" data-room="nonac-common" data-price="700">
+      <img src="hostel3.png" alt="Non-AC with Common Washroom" />
+      <h2>Non-AC Room with Common Washroom</h2>
+      <p>Budget-friendly Non-AC room with shared washroom facilities.</p>
+      <p class="price">₹1,40,000 per year</p>
+      <button class="select-room-btn">Select</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SRM Hostel. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0 1rem;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.room-selection {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.room-card {
+  background: white;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  width: 280px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.room-card:hover {
+  transform: scale(1.05);
+}
+
+.room-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-card h2 {
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.room-card p {
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.select-room-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.select-room-btn:hover {
+  background: #1e40af;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+
+/* ----------------- Responsive Design ----------------- */
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  header {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .room-card {
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .select-room-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .room-card {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .room-card {
+    width: 40%;
+  }
+}
+

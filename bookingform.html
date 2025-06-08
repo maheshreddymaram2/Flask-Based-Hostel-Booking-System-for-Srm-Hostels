@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Confirmation - SRM Hostel</title>
+  <link rel="stylesheet" href="bookingform.css" />
+  <script defer src="bookingform.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Confirm Your Booking</h1>
+    <form id="bookingForm" novalidate>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number" />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select Gender --</option>
+        <option value="Boy">Boy</option>
+        <option value="Girl">Girl</option>
+      </select>
+
+      <label for="roomType">Room Type:</label>
+      <select id="roomType" name="roomType" required>
+        <option value="">-- Select Room Type --</option>
+        <option value="AC with Attached Washroom">AC with Attached Washroom</option>
+        <option value="Non-AC with Attached Washroom">Non-AC with Attached Washroom</option>
+        <option value="Non-AC with Common Washroom">Non-AC with Common Washroom</option>
+      </select>
+
+      <label for="preference">Cot Preference:</label>
+      <select id="preference" name="preference" required>
+        <option value="">-- Select Preference --</option>
+        <option value="Window Cot">Window Cot</option>
+        <option value="Middle Cot">Middle Cot</option>
+        <option value="Normal Cot">Normal Cot</option>
+      </select>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h2>Booking Successful 🎉</h2>
+      <p>Thank you for booking your hostel room with SRM.</p>
+      <p id="bookingIdDisplay"></p>
+      <p>Redirecting to receipt page...</p>
+    </div>
+  </div>
+</body>
+</html>

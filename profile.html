@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Profile - SRM Hostel</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Your Profile</h1>
+    <form id="profileForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <button type="submit">Save Changes</button>
+    </form>
+    <div id="message"></div>
+  </div>
+</body>
+</html>
+
