@@ -19,6 +19,9 @@ db = mysql.connector.connect(
     database=os.getenv('DB_NAME'),
     port=int(os.getenv('DB_PORT', 3306)),
     connection_timeout=10
+    connection_attempts=3,
+    pool_name="mypool",
+    pool_size=5
 )
 cursor = db.cursor()
 
