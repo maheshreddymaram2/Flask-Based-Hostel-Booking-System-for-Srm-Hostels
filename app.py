@@ -20,7 +20,7 @@ def get_db_connection():
             password=os.getenv('DB_PASSWORD'),
             database=os.getenv('DB_NAME'),
             port=int(os.getenv('DB_PORT', 3306)),
-            connection_timeout=300  # Increase timeout in seconds
+            connection_timeout=10  # Increase timeout in seconds
         )
         return conn
     except Error as e:
